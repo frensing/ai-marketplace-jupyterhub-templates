@@ -22,7 +22,7 @@
 
 {% block main %}
 <div class="main-content container">
-  <div class="branding">
+  <div class="branding left-col">
     <div class="logos">
       <a class="logo" href="/" target="_blank">
         <img src="/hub/static/external/images/AI_Marketplace_Logo_en.png" alt="AI Marketplace" style="max-height:150px;max-width:100%;">
@@ -40,17 +40,6 @@
       <h3 align="center">Log in to JupyterHub</h3>
       {{ super() }}
     </div>
-    <p>
-      <small>
-        Funded by the
-        <a href="https://www.ed.gov/news/press-releases/us-department-education-awards-49-million-grant-university-california-davis-develop-free-open-textbooks-program"
-            target="_blank"> Open Textbooks Pilot Program (CFDA No. 84.116T)
-        </a> from the U.S. Department of Education. Equipment and support provided by the
-        <a href="https://bioinformatics.ucdavis.edu/" target="_blank">UC Davis Genome Center Bioinformatics Core</a>.
-      </small>
-    </p>
-
-    <div class="sponsors row align-items-center justify-content-around flex-wrap"></div>
   </div>
   {% endblock login %}
 
@@ -65,8 +54,16 @@
     background-color: #232F37;
   }
 
+  .navbar {
+    margin-bottom: 0px;
+  }
+
   .welcome {
     color:#fff;
+  }
+
+  .branding {
+    margin-bottom: 100px;
   }
 
   .logo {
@@ -105,11 +102,8 @@
   }
 
   .logos {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: auto 30px;
     flex-wrap: nowrap;
+    display: flex;
   }
 
   .left-col {
@@ -127,60 +121,6 @@
 
   .brand {
     flex-shrink: 2;
-  }
-
-  @media all and (max-width: 500px) {
-    .logos {
-      /* On small screens, we are no longer using row direction but column */
-      /* flex-direction: column; */
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .branding img {
-      justify-content: center;
-      max-width: 100%;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .logos {
-      justify-content: space-around;
-    }
-    .logo {
-      flex-basis: 50%;
-    }
-  }
-
-  @media (max-width: 1400px) {
-    .logos {
-      justify-content: space-around;
-    }
-    .main-content {
-      width: 100%;
-    }
-  }
-
-  @media (min-width: 1401px) {
-    .main-content {
-      width: 1400px;
-    }
-  }
-
-  .sponsors {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .sponsors-footer {
-    height: 300px;
-  }
-
-  .sponsor {
-    padding: 10px;
-    max-width: 100%;
-    max-height: 150px;
   }
 
   #login-box {
