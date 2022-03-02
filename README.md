@@ -1,2 +1,2 @@
-# ai-marketplace-jupyterhub-templates
-Custom HTML templates for a JupyterHub deployment
+# AI-Marketplace JupyterHub-Templates
+This repo contains custom HTML templates and Style sheets for a JupyterHub deployment.
